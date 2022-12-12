@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .gradient-text {
+    background-color: #ff0000;
+    
+    background-image: linear-gradient(
+          45deg,
+          #f8bcbc 1%, 
+          #ee5959 16.666%, 
+          #E16541 16.666%, 
+          #E16541 33.333%, 
+          #F18F43 33.333%, 
+          #F18F43 50%, 
+          #8B9862 50%, 
+          #8B9862 66.666%, 
+          #476098 66.666%, 
+          #476098 83.333%, 
+          #A7489B 83.333%);
+    
+    background-size: 100%;
+    background-repeat: repeat;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  }
+
+  .gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+  }
+
+  @keyframes rainbow-text-simple-animation-rev {
+    0% {background-size: 650%;}
+    40% {background-size: 650%;}
+    100% {background-size: 100%;}
+  }
+
+  @keyframes rainbow-text-simple-animation {
+    0% {background-size: 100%;}
+    80% {background-size: 650%;}
+    100% {background-size: 650%;}
+  }
+
+  h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 800!important;
+    font-size: 4em!important;
+    text-align: center;
+    margin-bottom: 0;
+    margin-bottom: -0.25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 1000px;
+  }
+  body{
+    background: linear-gradient(90deg, rgba(1,7,54,1) 21%, rgba(0,37,80,1) 53%, rgba(0,78,146,1) 76%)!important;
+  }
+    </style>
+  </head>
+  
+  <body>
+    {% include "exam/navbar.html" %}
+    <br><br><br><br><br>
+<!-- <img src="{% static "image/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;"> -->
+
+<h2 class="gradient-text">Deslogeo listo!. <br> Gracias por usar el sistema</h2>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br>
+{% include "exam/footer.html" %}
+
+  </body>
+</html>
+
